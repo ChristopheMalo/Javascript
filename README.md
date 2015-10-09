@@ -5,3 +5,4 @@ Comment dynamiser un site avec Javascript
 - Affichage d'une boite de dialogue
 - Fichier JS externe
 - Les variables
+- Les opérateurs arithmétiques
