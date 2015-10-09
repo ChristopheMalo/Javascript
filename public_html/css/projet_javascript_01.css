@@ -40,3 +40,16 @@ footer {
     line-height: 40px;
     text-align: center;
 }
+
+/**
+ * -------------------------
+ * Column
+ * -------------------------
+ */
+/* Force la même hauteur pour toutes les colonnesd'une rangée - Ne fonctionne pas sous IE9 */
+.row-same-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
