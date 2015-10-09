@@ -46,7 +46,7 @@ footer {
  * Column
  * -------------------------
  */
-/* Force la même hauteur pour toutes les colonnesd'une rangée - Ne fonctionne pas sous IE9 */
+/* Force la même hauteur pour toutes les colonnes d'une rangée - Ne fonctionne pas sous IE9 */
 .row-same-height {
   display: -webkit-box;
   display: -webkit-flex;
