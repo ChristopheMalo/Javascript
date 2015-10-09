@@ -7,4 +7,4 @@ Comment dynamiser un site avec Javascript
 - Les variables
 - Les opérateurs arithmétiques
 - La conversion des types
-- Les conditions (opérateurs de comparaison, opérateurs logiques)
+- Les conditions (opérateurs de comparaison, opérateurs logiques, les structures conditionnelles)
