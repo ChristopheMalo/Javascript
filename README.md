@@ -9,3 +9,4 @@ Comment dynamiser un site avec Javascript
 - La conversion des types
 - Les conditions (opérateurs de comparaison, opérateurs logiques, les structures conditionnelles)
 - Les boucles
+- Les fonctions
