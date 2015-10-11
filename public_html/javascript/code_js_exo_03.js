@@ -4,11 +4,11 @@
  */
 function chooseNumberAndReturnFactorielle() {
     /* Déclaration des variables */
-    var texteSaisi, nombre;
+    var chaineSaisie, nombre;
     
     while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => affichage de la boite de dialogue de saisie
-        texteSaisi = prompt('Saisis un nombre entre 1 et 15 : ');   // Récupérer le texte saisi
-        nombre = parseInt(texteSaisi);                              // transformer le texte en nombre
+        chaineSaisie = prompt('Saisis un nombre entre 1 et 15 : ');   // Récupérer le texte saisi
+        nombre = parseInt(chaineSaisie);                              // transformer le texte en nombre
         
         /* Contrôler la saisie de l'utilisateur grâce aux conditions */
         if (nombre <= 0) {
