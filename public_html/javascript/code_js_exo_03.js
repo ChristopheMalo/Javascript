@@ -15,7 +15,7 @@ function chooseNumberAndReturnFactorielle() {
             
             alert('Le nombre saisi doit être égal ou supérieur à 1 et positif !');
             
-        } else if (!isNaN(nombre) && 1 <= nombre && nombre <= 15) { // Vérification si la saisie est un nombre compris entre 1 et 15
+        } else if (1 <= nombre && nombre <= 15) { // Vérification si la saisie est un nombre compris entre 1 et 15
             
             /* Rappel du nombre saisi et calcul de la factoriell par appel de la fonction calculFactoriel */
             var finalNumber = alert('Le nombre saisi est ' + nombre + ' et sa factorielle : ' + calculFactoriel(nombre));
