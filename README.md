@@ -10,3 +10,4 @@ Comment dynamiser un site avec Javascript
 - Les conditions (opérateurs de comparaison, opérateurs logiques, les structures conditionnelles)
 - Les boucles
 - Les fonctions
+- Le débogage (base)
