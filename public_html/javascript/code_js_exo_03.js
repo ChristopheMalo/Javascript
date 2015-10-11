@@ -35,11 +35,11 @@ function chooseNumberAndReturnFactorielle() {
 
 /* Fonction de calcul de la factorielle */
 function calculFactoriel(arg) {
-    if (arg === 0) {
-        return 1;
-    } else {
-        return arg * calculFactoriel(arg - 1);
+    var n = 1;
+    for (var i = 2; i <= arg; i++) {
+        n = n * i;
     }
+    return n;
 }
 
 /* Appel de la fonction */
