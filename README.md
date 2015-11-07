@@ -12,3 +12,6 @@ Comment dynamiser un site avec Javascript
 - Les fonctions
 - Les objets et les tableaux
 - Le débogage (base)
+
+## Modeler les pages web
+- Manipuler le code HTML partie 1
