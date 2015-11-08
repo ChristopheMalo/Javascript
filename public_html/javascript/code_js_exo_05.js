@@ -21,26 +21,28 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie ou pas de cl
             
     } else {
         
-        chaineSaisie2 = prompt('Saisis un deuxième nombre : ');  // Récupérer la 2ème chaine saisie
-        
-        if (chaineSaisie2 === null) {
-            
-            break;
-            
-        } else if ((!chaineSaisie2) || (chaineSaisie2.trim() === '') || (isNaN(chaineSaisie2))) {
-            
-            console.log(('Tu dois saisir un nombre'));
-            
-        } else {
-        
-            nombre1 = parseInt(chaineSaisie1); // Convertir la chaine saisie en nombre
-            nombre2 = parseInt(chaineSaisie2); // Convertir la chaine saisie en nombre
-            
-            // Appel de la fonction
-            console.log('Résultat de l\'addition de ' + nombre1 + ' + ' + nombre2 + ' : ' + addition(nombre1, nombre2));
-        
-            //break; // Activer le break si souhait d'une seule addition
-            
+        while (true) {
+            chaineSaisie2 = prompt('Saisis un deuxième nombre : ');  // Récupérer la 2ème chaine saisie
+
+            if (chaineSaisie2 === null) {
+
+                break;
+
+            } else if ((!chaineSaisie2) || (chaineSaisie2.trim() === '') || (isNaN(chaineSaisie2))) {
+
+                console.log(('Tu dois saisir un nombre'));
+
+            } else {
+
+                nombre1 = parseInt(chaineSaisie1); // Convertir la chaine saisie en nombre
+                nombre2 = parseInt(chaineSaisie2); // Convertir la chaine saisie en nombre
+
+                // Appel de la fonction
+                console.log('Résultat de l\'addition de ' + nombre1 + ' + ' + nombre2 + ' : ' + addition(nombre1, nombre2));
+
+                break; // Sortir de la 2ème boucle while - Retour saisie nombre 1
+
+            }
         }
     }
 }
