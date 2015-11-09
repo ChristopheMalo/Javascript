@@ -22,7 +22,7 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
 
             alert('Le nombre saisi doit être égal ou supérieur à 1 et positif !');
 
-        } else if (1 <= nombre && nombre <= 5) { // Vérification si la saisie est un nombre compris entre 1 et 15
+        } else if (1 <= nombre && nombre <= 5) { // Vérification si la saisie est un nombre compris entre 1 et 5
 
             /* Rappel du nombre saisi et calcul de la factoriell par appel de la fonction calculFactoriel */
             console.log('Le nombre saisi est ' + nombre);
