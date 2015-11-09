@@ -61,7 +61,7 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
                     console.log(motDiese);
                     console.log(motDiese);
                     console.log(motDiese);
-                    console.log(motDiese)
+                    console.log(motDiese);
                     break;
             }
             
