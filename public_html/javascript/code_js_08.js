@@ -29,7 +29,6 @@ testTableau.push('Item 6', 'Item 7');
 
 console.log(testTableau);
 
-// Reprendre à Ajouter et supprimer des items
 
 /* Exemple 4 */
 var testSplit   = "Je teste la méthode Split dans cet exemple 4",
