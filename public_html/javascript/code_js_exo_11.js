@@ -4,10 +4,10 @@
  * 
  */
 // Initialiser le tableau d'origine
-var prenoms = ['Pierre'];
+var prenoms = ['Pierre', 'Julien', 'Thomas'];
 
 // La boucle demande 2 prénoms
-while (prenoms.length < 3) {
+while (prenoms.length < 5) {
     prenom = prompt('Ajoute un prénom à la liste : ');
     prenoms.push(prenom);
 }
