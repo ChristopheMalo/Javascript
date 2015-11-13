@@ -10,7 +10,7 @@ var condition01, condition02, resultLogique;
 resultNumber = number01 === number02;
 alert('Résultat de la condition 1 : ' + resultNumber); // True
 
-resultNumber = number04 == myText;
+resultNumber = number04 === myText;
 alert('Résultat de la condition 2 : ' + resultNumber); // True
 
 resultNumber = number04 === myText;
