@@ -40,7 +40,7 @@ var lien2 = document.createElement('a');
 lien2.href  = 'http://fr.wikipedia.org/wiki/World_Wide_Web';
 lien2.title = 'World Wide Web';
 
-// Assigner et insérer lesl iens aux 2 noeuds 'texte'
+// Assigner et insérer les liens aux 2 noeuds 'texte'
 lien1.appendChild(noeudsTextes[5]);
 lien2.appendChild(noeudsTextes[7]);
 
