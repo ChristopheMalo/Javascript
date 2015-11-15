@@ -5,7 +5,7 @@
  */
 // Création de l'élément conteneur
 var conteneurDiv = document.createElement('div');
-    conteneurDiv.id = 'conteneurDivID';
+    conteneurDiv.id = 'conteneurDivID_TP1';
     
     
 // Création des noeuds 'texte' - Utilisation d'un tableau
