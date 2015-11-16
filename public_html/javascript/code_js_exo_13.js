@@ -2,6 +2,9 @@
  * Code Javascript exercice 09 - Nombre X et #
  * Contrôle de saisie de l'utilisateur
  * 
+ * 
+ * EN COURS DE DEVELOPPEMENT
+ * 
  */
 /* Déclaration des variables */
 var chaineSaisie, nombre;
@@ -26,52 +29,61 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
 
             /* Rappel du nombre saisi et calcul de la factoriell par appel de la fonction calculFactoriel */
             console.log('Le nombre saisi est ' + nombre);
+            
+            //console.log(carre(nombre, nombre));
 
-            // Afficher le résultat
-            var motDiese = '';
+            console.log(carre2(nombre, nombre));
             
-            for (var i = 0; i < nombre; i++) {
-                motDiese += '#';
-                //console.log(motDiese); // Affichage en escalier
-            }
+            //console.log(carre3(nombre));
             
-            // Avec un switch - Firefox affiche correctement chaque ligne
-            console.log('Avec un switch');
-            switch (nombre) {
-                case 1:
-                    console.log(motDiese);
-                    break;
-                case 2:
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    break;
-                case 3:
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    break;
-                case 4 :
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    break;
-                case 5 :
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    console.log(motDiese);
-                    break;
-            }
+            //console.log(carre4(nombre));
+
             
-            console.log('\n');
-            
-            // Avec un for => les occurences sont concentrées en 1 ligne
-            console.log('Avec un for');
-            for (var i = 0; i < nombre; i++) {
-                console.log(motDiese);
-            }
+//            // Afficher le résultat
+//            var motDiese = '';
+//            
+//            for (var i = 0; i < nombre; i++) {
+//                motDiese += '#';
+//                //console.log(motDiese); // Affichage en escalier
+//            }
+//            
+//            // Avec un switch - Firefox affiche correctement chaque ligne
+//            console.log('Avec un switch');
+//            switch (nombre) {
+//                case 1:
+//                    console.log(motDiese);
+//                    break;
+//                case 2:
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    break;
+//                case 3:
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    break;
+//                case 4 :
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    break;
+//                case 5 :
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    console.log(motDiese);
+//                    break;
+//            }
+//            
+//            console.log('\n');
+//            
+//            // Avec un for => les occurences sont concentrées en 1 ligne
+//            console.log('Avec un for');
+//            for (var i = 0; i < nombre; i++) {
+//                console.log(motDiese);
+//            }
             
             
             
@@ -88,3 +100,59 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
 }
 
 console.log('Au revoir et merci :)');
+
+
+function carre(x, y) {
+    var i, j;
+    for (j = 1; j <= y; j++) {
+        for (i = 1; i <= x; i++) {
+                console.log('#');
+        }
+        console.log('#');
+    }
+}
+
+function carre2(x, y)
+{
+    var i, j;
+ 
+    for(j=1; j <= y; j++)
+    {
+        for(i=1; i <= x; i++)
+        {
+            if ((j == 1 && i == 1) || (j == y && i == x))
+                console.log("#");
+            else if ((j == 1 && i == x) || (j == y && i == 1))
+                console.log("#");
+            else if (j==1 || j==y || i==1 || i==x)
+                console.log("#");
+            else
+                console.log("#");
+        }
+        console.log("\n");
+    }
+}
+
+function carre3 (x)
+{
+    var i, j;
+
+    for(i = 0; i < x; i++)
+    {   console.log('X');
+        
+        for(j = 0; j < i + 1; j++)
+            console.log("X");
+            console.log('\n');
+    }
+}
+
+function carre4 (x) {
+    var diese;
+    for (var i = 0; i < x; i++) {
+        diese += '#';
+//        for (var j = 0; j < y; j++) {
+//            console.log(' ');
+//       }
+    }
+    console.log(diese);
+}
