@@ -2,7 +2,7 @@
  * Code Javascript exercice 16 - Insérer des éléments dans une liste
  * 
  */
-// Récupérer nom de OL pour poistionner les li
+// Récupérer nom de OL pour positionner les li
 var ol = document.getElementById('name_ol_id');
 
 // Création des textes
