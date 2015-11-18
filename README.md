@@ -16,3 +16,4 @@ Comment dynamiser un site avec Javascript
 ## Modeler les pages web
 - Manipuler le code HTML partie 1
 - Manipuler le code HTML partie 2
+- Les événements
