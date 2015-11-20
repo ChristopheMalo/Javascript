@@ -24,6 +24,24 @@
             #main {
                 margin-bottom: 100px;
             }
+            
+            /* CSS pour problèmes d'héritages */
+            #div-heritage, #resultat3 {
+                margin: 50px;
+            }
+
+            #div-heritage {
+                padding: 10px;
+                width: 200px;
+                text-align: center;
+                background-color: #000;
+            }
+
+            #div-heritage div {
+                margin: 10px;
+                background-color: #555;
+            }
+            
         </style>
     </head>
     <body>
@@ -103,6 +121,40 @@
                     MouseOUT sur l'enfant
                     <div id="child2B">ENFANT 2B</div>
                 </div>
+            </div>
+            <div class="row">
+                <h2>Touches frappées</h2>
+                <p>
+                    <input id="fierld" type="text">
+                </p>
+                <table>
+                    <tr>
+                        <td>keydown</td>
+                        <td id="down"></td>
+                    </tr>
+                    <tr>
+                        <td>keypress</td>
+                        <td id="press"></td>
+                    </tr>
+                    <tr>
+                        <td>keyup</td>
+                        <td id="up"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <h2>Bloquer l'actiop</h2>
+                <a id="link2" href="http://www.christophe-malo.com">Lien vers un site - à cliquer !</a>
+            </div>
+            <div class="row">
+                <h2>Problèmes d'héritage</h2>
+                <div id='div-heritage'>
+                    <div>Texte 1</div>
+                    <div>Texte 2</div>
+                    <div>Texte 3</div>
+                    <div>Texte 4</div>
+                </div>
+                <div id='resultat3'></div>
             </div>
         </div>
         <script src="../javascript/code_js_12.js"></script>

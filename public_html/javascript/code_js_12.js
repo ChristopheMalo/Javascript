@@ -118,3 +118,74 @@ child1B.addEventListener('mouseover', function(e) {
 child2B.addEventListener('mouseout', function(e) {
     resultat2.innerHTML = 'L\'élément survolé juste après que le curseur ait quitté l\'enfant 2 est : ' + e.relatedTarget.id;
 }, false);
+
+
+// Récupérer les touches frappées par l'utilisateur
+var field   = document.getElementById('field');
+var down    = document.getElementById('down');
+var press   = document.getElementById('press');
+var up      = document.getElementById('up');
+
+document.addEventListener('keydown', function(e) {
+    down.innerHTML = e.keyCode;
+}, false);
+
+document.addEventListener('keypress', function(e) {
+    press.innerHTML = e.keyCode;
+}, false);
+
+document.addEventListener('up', function(e) {
+    up.innerHTML = e.keyCode;
+}, false);
+
+// Retourne le mot Test
+console.log(String.fromCharCode(84, 101, 115, 116));
+
+
+// BLoquer une action par défaut
+var link2 = document.getElementById('link2');
+
+link2.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('Tu as cliqué et l\'action est bloqué');
+}, false);
+
+
+// Problèmes d'héritage
+var divHeritage = document.getElementById('div-heritage');
+var resultat3   = document.getElementById('resultat3');
+
+// Test 1
+//divHeritage.addEventListener('mouseover', function() {
+//    resultat3.innerHTML += 'Le curseur vient d\'entrer.<br>';
+//}, false);
+//
+//divHeritage.addEventListener('mouseout', function() {
+//    resultat3.innerHTML += 'Le curseur vient de sortir.<br>';
+//}, false);
+
+// Test 2
+divHeritage.addEventListener('mouseover', function(e) {
+    var relatedTarget = e.relatedTarget;
+    
+    while (relatedTarget !== divHeritage && relatedTarget.nodeName !=='BODY' && relatedTarget !== document) {
+        relatedTarget = relatedTarget.parentNode;
+    }
+    
+    if (relatedTarget !== divHeritage) {
+        resultat3.innerHTML += 'Le curseur vient d\'entrer.<br>';
+    }
+}, false);
+
+
+divHeritage.addEventListener('mouseout', function(e) {
+    var relatedTarget = e.relatedTarget;
+    
+    while (relatedTarget !== divHeritage && relatedTarget.nodeName !=='BODY' && relatedTarget !== document) {
+        relatedTarget = relatedTarget.parentNode;
+    }
+    
+    if (relatedTarget !== divHeritage) {
+        resultat3.innerHTML += 'Le curseur vient de sortir.<br>';
+    }
+}, false);
