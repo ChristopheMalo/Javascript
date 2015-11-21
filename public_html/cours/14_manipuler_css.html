@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Maniouler CSS - Modeler vos pages web - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Manipuler le CSS - Modeler vos pages web - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <style>
+            #main {
+                margin-bottom: 100px;
+            }
+            
+            div#rappel p {
+                color: red;
+            }
+            
+            /* Parent / Enfant / offset */
+            #parentChild {
+                /*position: relative;*/
+                height: 300px;
+            }
+            
+            #parent {
+                position: absolute;
+                    top: 500px;
+                    left: 100px;
+            }
+            
+            #child {
+                position: absolute;
+                top: 50px;
+                left: inherit;
+            }
+            
+            #parent {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+            
+            #child {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+            }
+            
+            /* Test Offset Width */
+            #testOffset {
+                width: 424px;
+                height: 300px;
+                padding: 10px;
+                border: 2px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div id="main" class="container">
+            <div id="descriptif" class="row">
+                <h1>Javascript</h1>
+                <h2>Manipuler le CSS - Modeler vos pages web</h2>
+                <p id="descriptif-text">Manipuler le CSS - avec Javascript.</p>
+            </div>
+            
+            <a class="btn btn-primary" href="../index.html#js_part2" role="button" >Retour à l'index</a>
+            
+            <div id="rappel" class="row">
+                <h2>Rappel</h2>
+                <div><p>Texte 1</p></div>
+                <div><p id="stylePrioritaire" style="color: blue;">Texte avec style prioritaire en bleu</p></div>
+                <div><p>Texte 2</p></div>
+                <div><p>Texte 3</p></div>
+            </div>
+            
+            <div id="parentChild" class="row">
+                <h2>Parent / Enfant / offset</h2>
+                <div id="parent">
+                    <div id="child"></div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <h2>Test Offset Width</h2>
+                <div id="testOffset">
+                    <p>Width -> 424px, padding -> 10px, border -> 2px</p>
+                    <p>offsetWidth -> 424px</p>
+                    <p><strong>Attention :</strong> avec boostrap, width correspond à offsetWidth.<br>
+                        Margin et border seront intégrés dans la largeur width.<br>
+                        Width est à 424 - padding - border = 400px pour les élément P child du div.<br>
+                        Si l'on souhaite 400 popur un child il faudra donc mettre un width à 424 ou plus selon padding et border<br>
+                        Sans bootstrap, le padding et le border sont bien ajoutés à width. 400 + padding + border.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="../javascript/code_js_14.js"></script>
+    </body>
+</html>
