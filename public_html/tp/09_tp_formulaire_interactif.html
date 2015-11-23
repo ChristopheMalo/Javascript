@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Un formulaire intéractif - TP 09 - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Un formulaire intéractif - TP 09 - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            #main {
+                margin-bottom: 50px;
+            }
+            .popover {
+                width: 500px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div id="main" class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Un formulaire intéractif - TP 09</h2>
+                <p>Coder un formulaire intéractif</p>
+                <p class="alert alert-danger" role="alert">
+                    Contrôle simple de la saisie, pas de regex ici<br>
+                    Utilisation de <br>
+                    Amélioration : les tooltips apparaissent lors du rollover sur le champ concernés
+                </p>
+                <a class="btn btn-primary" href="../index.html#js_part2" role="button" >Retour à l'index</a> 
+            </div>
+            
+            <!-- Le formulaire
+            ================================================== -->
+            <div class="row">
+                <h2>Le formulaire</h2>
+                <form class="form-horizontal col-sm-12" method="post" action="pages/form_resultat.php">
+                    
+                    <!-- Boutons radio - Sexe -->                    
+                    <div class="form-group form-group-lg">
+                        <label class="col-sm-3 control-label">Ton sexe :</label>
+                        <div class="col-sm-5">
+                            <div class="radio">
+                                <label for="femme">
+                                    <input type="radio" id="femme" name="femme" value="femme">
+                                    Femme
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="homme">
+                                    <input type="radio" id="homme" name="homme" value="homme">
+                                    Homme
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Champ de saisie texte une ligne - Prénom -->
+                    <div class="form-group form-group-lg">
+                        <label for="prenom" class="col-sm-3 control-label">Ton prénom : </label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="text" name="prenom" id="prenom" placeholder="Ton prénom" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Champ de saisie texte une ligne - Nom -->
+                    <div class="form-group form-group-lg">
+                        <label for="nom" class="col-sm-3 control-label">Ton nom : </label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="text" name="nom" id="nom" placeholder="Ton nom">
+                        </div>
+                    </div>
+                    
+                    <!-- Champ de saisie texte une ligne - Âge -->
+                    <div class="form-group form-group-lg">
+                        <label for="age" class="col-sm-3 control-label">Ton âge : </label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="text" name="age" id="age" placeholder="Ton âge">
+                        </div>
+                    </div>
+                    
+                    <!-- Champ de saisie texte une ligne - Pseudo -->
+                    <div class="form-group form-group-lg">
+                        <label for="pseudo" class="col-sm-3 control-label">Ton pseudo : </label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="text" name="pseudo" id="pseudo" placeholder="Ton pseudo">
+                        </div>
+                    </div>
+                    
+                    <!-- Password -->
+                    <div class="form-group form-group-lg">
+                        <label for="password" class="col-sm-3 control-label">Mot de passe : </label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Ton mot de passe">
+                        </div>
+                    </div>
+                    
+                    <!-- Password - Confirmation -->
+                    <div class="form-group form-group-lg">
+                        <label for="confirmpassword" class="col-sm-3 control-label">Mot de passe :<br>(confirmation)</label>
+                        <div class="col-sm-5"> 
+                            <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirme ton mot de passe">
+                        </div>
+                    </div>
+                    
+                    <!-- Liste déroulante -->
+                    <div class="form-group  form-group-lg">
+                        <label for="pays" class="col-sm-3 control-label">Votre pays : </label>
+                        <div class="col-sm-5">
+                            <select class="form-control" name="pays">
+                                <option value="Suisse">Suisse</option>
+                                <option value="Belgique">Belgique</option>
+                                <option value="France">France</option>
+                                <option value="Italie">Italie</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Case à cocher -->
+                    <div class="form-group form-group-lg">
+                        <div class="col-sm-12">
+                            <div class="checkbox">
+                                <label for="choix01">
+                                    <input type="checkbox" name="choix01" id="choix01"> Recevoir nos emails
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="reset" class="btn btn-default btn-lg pull-right">Effacer</button>
+                    <button type="submit" class="btn btn-default btn-lg pull-right">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="../javascript/code_js_tp_09.js"></script>
+        
+    </body>
+</html>
