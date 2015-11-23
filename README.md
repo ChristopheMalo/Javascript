@@ -19,3 +19,6 @@ Comment dynamiser un site avec Javascript
 - Les événements
 - Les formulaires
 - Manipuler le CSS
+
+## Les objets et les designs patterns
+- Les objets
