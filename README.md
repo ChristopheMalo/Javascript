@@ -22,3 +22,4 @@ Comment dynamiser un site avec Javascript
 
 ## Les objets et les designs patterns
 - Les objets
+- Les chaines de caractères
