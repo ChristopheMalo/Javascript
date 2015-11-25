@@ -21,12 +21,30 @@ dataPseudo.setAttribute('data-content', 'Le pseudo ne peut pas faire moins de 4 
 //dataPassword.setAttribute('Le mot de passe ne doit pas faire moins de 6 caractères');
 //dataConfirmPassword.setAttribute('Le mot de passe de confirmation doit être identique à celui d\'origine');
 
-// Créer la dynamiquement la création des popover informations des champs du formulaire
+
 $(document).ready(function() {
-   $('input').popover({
-       container: 'form', // Spécifier le container global -> permet au popover de prendre une largeur plus importante
-       toggle: 'popover',
-       placement: 'top',
-       trigger  : 'hover'
-   });
+    // Créer la dynamiquement la création des popover informations des champs du formulaire
+    $('input').popover({
+        container: 'form', // Spécifier le container global -> permet au popover de prendre une largeur plus importante
+        toggle: 'popover',
+        placement: 'top',
+        trigger  : 'hover'
+    });
+   
+   
+    // Fonctions de vérification
+    $('#form input[type=text]').on('change invalid', function() {
+        var textfield = $(this).get(0);
+
+        // 'setCustomValidity not only sets the message, but also marks
+        // the field as invalid. In order to see whether the field really is
+        // invalid, we have to remove the message first
+        textfield.setCustomValidity('');
+
+        if (!textfield.validity.valid) {
+          textfield.setCustomValidity('MEssage erreur');  
+        }
+    });
+   
+   
 });
