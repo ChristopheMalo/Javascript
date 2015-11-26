@@ -3,7 +3,7 @@
  * 
  * 
  */
-// Utilisaation de la méthode test() de l'objet RegExp
+// Utilisation de la méthode test() de l'objet RegExp
 // i : ignorer les majuscules
 // | : ou
 // ^ $ : début et fin d'une chaine
