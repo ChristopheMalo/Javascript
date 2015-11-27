@@ -24,3 +24,4 @@ Comment dynamiser un site avec Javascript
 - Les objets
 - Les chaines de caractères
 - Les expressions régulières (regex)
+- Les objets numériques
