@@ -25,3 +25,4 @@ Comment dynamiser un site avec Javascript
 - Les chaines de caractères
 - Les expressions régulières (regex)
 - Les objets numériques
+- La gestion du temps
