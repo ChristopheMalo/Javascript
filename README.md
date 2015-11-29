@@ -1,6 +1,8 @@
 # Javascript
 Comment dynamiser un site avec Javascript
 
+L'ensemble des cours, exercices et TP utilisent la console (console.log) pour afficher les résultats. Quelques uns utilisent alert()
+
 ## Les bases du Javascript
 - Affichage d'une boite de dialogue
 - Fichier JS externe
@@ -26,3 +28,4 @@ Comment dynamiser un site avec Javascript
 - Les expressions régulières (regex)
 - Les objets numériques
 - La gestion du temps
+- Les tableaux
