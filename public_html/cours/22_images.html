@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Les images - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Les images - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .linkLB {
+                border : solid 3px red;
+            }
+            
+            #overlay {
+                display : none; /* Masquer l'overlay de base */
+
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                text-align: center; /* Centrer l'image dans l'overlay */
+
+                /* Gérer le background de l'overlay en CSS3. */
+                background-color: rgba(0,0,0,0.6);
+            }
+            
+            #overlay img {
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Les images</h2>
+                <p>Manipuler une image</p>
+                <p class="alert alert-danger" role="alert">Utilisation de l'objet image</p>
+            </div>
+            <a class="btn btn-primary" href="../index.html#js_part3" role="button" >Retour à l'index</a>
+        
+            <div class="row">
+                <h3>Intégrer une image</h3>
+                <div  id='containerImg'>
+                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <h3>Lightbox</h3>
+                <div  id='containerLightbox'>
+                    <p>
+                        <a href="../images/1.jpg" title="Afficher l'image originale" class="linkLB"><img src="../images/1_min.jpg" alt="Miniature" /></a>
+                        <a href="../images/2.jpg" title="Afficher l'image originale" class="linkLB"><img src="../images/2_min.jpg" alt="Miniature" /></a>
+                        <a href="../images/3.jpg" title="Afficher l'image originale" class="linkLB"><img src="../images/3_min.jpg" alt="Miniature" /></a>
+                        <a href="../images/4.jpg" title="Afficher l'image originale" class="linkLB"><img src="../images/4_min.jpg" alt="Miniature" /></a>
+                    </p>
+                    <div id="overlay"></div>
+                </div>
+            </div>
+        </div>
+        <script src="../javascript/code_js_22.js"></script>
+    </body>
+</html>

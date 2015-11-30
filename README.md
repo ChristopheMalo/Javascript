@@ -29,3 +29,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 - Les objets numériques
 - La gestion du temps
 - Les tableaux
+- Les images
