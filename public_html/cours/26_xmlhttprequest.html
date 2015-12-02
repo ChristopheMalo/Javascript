@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="XMLHttpRequest - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>XMLHttpRequest - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            
+            #progression {
+              margin: 10px 0;
+              width: 300px; height: 30px;
+              border: 1px solid #222;
+            }
+
+            #progression div {
+              width: 0; height: 100%;
+              background-color: #AAA;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>XMLHttpRequest</h2>
+                <p>Utiliser l'objet XMLHttpRequest</p>
+                <p class="alert alert-danger" role="alert">Connaissances en PHP impérative</p>
+            </div>
+            <a class="btn btn-primary" href="../index.html#js_part4" role="button" >Retour à l'index</a>
+            
+            <div class="row">
+                <h2>Charger le contenu de 2 fichiers</h2>
+                <p>
+                    Choisis le fichier dont tu souhaites voir le contenu :
+                </p>
+
+                <p>
+                    <input type="button" value="file1.txt" />
+                    <input type="button" value="file2.txt" />
+                </p>
+
+                <p id="fileContent">
+                    <span>Aucun fichier chargé</span>
+                </p>
+            </div>
+            
+            <div class="row">
+                <h2>Progress bar</h2>
+                <p>
+                    Cliquez pour effectuer le chargement d'un fichier de 1,5 Mo :
+                    <br><br>
+                    <input id="loadButton" value="Commencer !" type="button">
+                    <br><br>
+                    Si le prochain chargement se fait instantanément, pensez bien à vider le cache généré aujourd'hui par votre navigateur.
+                </p>
+                <div id="progression">
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class='row'>
+                <form id="myForm">
+                    <input id="myText" name="myText" type="text" value="Test ! Un, deux, un, deux !">
+                </form>
+                <?php echo $_POST['myText'];  ?>
+            </div>
+        </div>
+        <script src="../javascript/code_js_26.js"></script>
+    </body>
+</html>
