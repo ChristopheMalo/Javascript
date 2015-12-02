@@ -31,3 +31,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 - Les tableaux
 - Les images
 - Les polyfills et les wrappers
+- Les closures
