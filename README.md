@@ -36,3 +36,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 ## L'échange de données avec l'Ajax
 - Qu'est-ce que l'Ajax ?
 - XMLHttpRequest
+- Upload via une iframe
