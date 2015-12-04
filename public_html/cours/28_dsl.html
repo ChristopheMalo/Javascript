@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Dynamic Script Loading - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Dynamic Script Loading - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Dynamic Script Loading</h2>
+                <p>Une manière astucieuse de dialoguer avec un serveur</p>
+                <p class="alert alert-danger" role="alert">pas de limite par le principe de la "same origin policy"</p>
+            </div>
+            <a class="btn btn-primary" href="../index.html#js_part4" role="button" >Retour à l'index</a>
+            
+            <div class="row">
+                <h2>Charger un script (Fichier JS)</h2>
+                 <script>
+                // Charger un fichier javascript qui execute une fonction qui se trouve dans une page HTML
+                    function sendDSL() {
+                        var scriptElement = document.createElement('script');
+                            scriptElement.src = '../javascript/code_js_28.js';
+
+                        document.body.appendChild(scriptElement);
+                    }
+
+                    function receiveMessage(message) {
+                        console.log(message);
+                    }
+
+                </script>
+                <button class="btn btn-default btn-lg" type="button" onclick="sendDSL()">Exécuter le script</button>
+            </div>
+            
+            <div class="row">
+                <h2>Charger un script (Fichier PHP)</h2>
+                 <script>
+                // Charger un fichier php qui contient du JS
+                    function sendDSL02() {
+                        var scriptElement = document.createElement('script');
+                            scriptElement.src = '../files/fileDSL01.php?prenom=' + prompt('Quel est ton prénom ?');
+
+                        document.body.appendChild(scriptElement);
+                    }
+
+                    function receiveMessage02(message) {
+                        console.log(message);
+                    }
+
+                </script>
+                <button class="btn btn-default btn-lg" type="button" onclick="sendDSL02()">Exécuter le script 02</button>
+            </div>
+            
+            <div class="row">
+                <h2>Charger du JSON (Fichier PHP)</h2>
+                 <script>
+                // Charger un fichier php qui contient du JSON
+                    function sendDSL03() {
+                        var scriptElement = document.createElement('script');
+                            scriptElement.src = '../files/JSONDatas01.php';
+
+                        document.body.appendChild(scriptElement);
+                    }
+
+                    function receiveMessage03(json) {
+                        var details = '', nbItems, i;
+
+                        for (node in json) { 
+                            details   += node + "\n";
+                            nbItems = json[node].length;
+
+                            for (i=0; i<nbItems; i++) {
+                                details += '\t' + json[node][i] + '\n';
+                            }
+                        }
+    
+                        console.log(details);
+                    }
+
+                </script>
+                <button class="btn btn-default btn-lg" type="button" onclick="sendDSL03()">Exécuter le script 03</button>
+            </div>
+            
+        </div>
+    </body>
+</html>

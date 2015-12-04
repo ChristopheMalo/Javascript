@@ -37,3 +37,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 - Qu'est-ce que l'Ajax ?
 - XMLHttpRequest
 - Upload via une iframe
+- Dynamic Scripting Loading
