@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Auto completion - TP 11 - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Auto completion - TP 11 - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            #main {
+                margin-bottom: 50px;
+            }
+            
+            #results {
+                border: solid 1px #bbb;
+                border-radius: 5px;
+                display: none; /* Cacher le conteneur div au lancement de l'application */
+                font-size: 130%;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div id="main" class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Auto completion - TP 11</h2>
+                <p>Coder un système d'auto completion</p>
+                <p class="alert alert-danger" role="alert">
+                    <strong>Amélioration à prévoir :</strong>
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Rendre fonctionnel l'utilisation des touches fléchées pour parcourir la liste de résultats</li>
+                    <li class="list-group-item">surligner la partie qui n'a pas été mentionnée par l'utilisateur</li>
+                    <li class="list-group-item">Utiliser le JSON pour afficher des informations structurées complémentaire</li>
+                </ul>
+                
+                <a class="btn btn-primary" href="../index.html#js_part4" role="button" >Retour à l'index</a> 
+            </div>
+            
+            <!-- Le formulaire
+            ================================================== -->
+            <div class="row">
+                <h2>Auto completion</h2>
+                <form id="form" class="form-horizontal col-sm-12" method="post" action="#">
+                                        
+                    <!-- Champ de saisie texte une ligne - Prénom -->
+                    <div class="form-group form-group-lg">
+                        <label for="search" class="col-sm-3 control-label">Recherche : </label>
+                        <div class="col-sm-9"> 
+                            <input class="form-control" type="text" name="search" id="search" placeholder="Ta recherche" autocomplete="off">
+                        </div>
+                    </div>
+                    
+                    <div id="results" class="col-sm-offset-3">
+                        
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <script src="../javascript/code_js_tp_11.js"></script>
+        
+    </body>
+</html>
