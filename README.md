@@ -38,3 +38,6 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 - XMLHttpRequest
 - Upload via une iframe
 - Dynamic Scripting Loading
+
+## Javascript et HTML5
+- L'audio et la video

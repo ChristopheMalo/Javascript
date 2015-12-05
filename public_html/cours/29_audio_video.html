@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="L'audio et la vidéo - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>L'audio et la vidéo - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            /* le player container */
+            #player-container {
+                border: solid 1px #bbb;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+            
+            hr {
+                height: 1px;
+                background-color:#bbb;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            
+            /* Barre de volume */
+            .volume {
+                vertical-align: bottom;
+                display: inline-block;
+                height: 25px;
+                white-space: nowrap;
+                position: relative;
+                width: 45px;
+            }
+
+            .volume a {
+                display: inline-block;
+                background: #6a6073;
+                width: 8px;
+                vertical-align: bottom;
+                margin-left: 0px;
+                margin-right: 0px;
+                cursor: pointer;
+                border-left: 1px solid #fff;
+                position: absolute;
+                bottom: 0;	
+            }
+
+            .stick1 { height: 5px;  left: 0px; }
+            .stick2 { height: 10px; left: 9px; }
+            .stick3 { height: 15px; left: 18px; }
+            .stick4 { height: 20px; left: 27px; }
+            .stick5 { height: 25px; left: 36px; }
+            
+            /* Barre de progression */
+            #progressBarControl {
+                width: 210px;
+                height: 15px;
+                border: 1px solid #aaa;
+                border-radius: 2px;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+
+            #progressBar {
+                width: 0px;
+                background: #ebebeb;
+                height: 15px;
+                text-align: right;
+                line-height: 15px;
+                font-size: 9px;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+
+            #progressTime {
+                font-size: 10px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>L'audio et la vidéo</h2>
+                <p>Jouer des sons et lire des vidéos nativement</p>
+                <p class="alert alert-danger" role="alert">
+                    Sans plug-in, uniquement en HTML5 et interaction Javascript<br>
+                    Pour le son -> Uniquement du mp3, pas de ogg<br>
+                    <strong>Améliorations :</strong>
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Slider pour les barres de volume (voir le changement visuellement</li>
+                    <li class="list-group-item">Une couleur pour la barre de progression</li>
+                </ul>
+            </div>
+            <a class="btn btn-primary" href="../index.html#js_part5" role="button" >Retour à l'index</a>
+            
+            <div class="clear"></div>
+            
+            <div id="player-container" class="row col-sm-4">
+                <h2>Un Player léger</h2>
+                <hr>
+                <audio id="soft-player" ontimeupdate="update(this)">
+                    <source src="../files/04_-_Anitek_-_Broke_Inside_My_Mind_feat._Ellie_Griffiths.mp3">
+                </audio>
+                <button id="play" class="btn btn-success btn-lg" onclick="play('soft-player', this)">Play</button>
+                <button id="stop" class="btn btn-danger btn-lg" onclick="resume('soft-player', 'play')">Stop</button>
+                
+                <!-- Simple contrôle du volume -->
+                <span class="volume">
+                    <a class="stick1" onclick="volume('soft-player', 0)"></a>
+                    <a class="stick2" onclick="volume('soft-player', 0.3)"></a>
+                    <a class="stick3" onclick="volume('soft-player', 0.5)"></a>
+                    <a class="stick4" onclick="volume('soft-player', 0.7)"></a>
+                    <a class="stick5" onclick="volume('soft-player', 1)"></a>
+                </span>
+                
+                
+                <div>
+                    <div id="progressBarControl">
+                        <div id="progressBar" onclick="clickProgress('soft-player', this, event)">Pas de lecture</div>
+                    </div>
+                <span id="progressTime">00:00</span>
+                </div>
+                
+                <p><em>copyright : Anitek - <a href="http://www.auboutdufil.com/index.php?id=472#comments">Lien site</a></em></p>
+                <p><em><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.fr">Lien licence creative commons</a></em></p>
+            </div>
+            
+        </div>
+        <script src="../javascript/code_js_29.js"></script>
+    </body>
+</html>
