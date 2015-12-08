@@ -82,6 +82,50 @@ context04.closePath();
 context04.fillStyle = "rgb(23, 145, 167)";
 context04.fill();
 
-context04.font = "68px Calibri,Geneva,Arial";
+context04.font = "68px Calibri,Geneva,Arial"; // Texte
 context04.fillStyle = "white";
 context04.fillText("js", 84, 115);
+
+
+// Images et textes
+/* Image simple */
+var canvas05 = document.getElementById('canvas05');
+var context05 = canvas05.getContext('2d');
+var image01 = new Image();
+image01.src = '../images/apple-1051018.jpg'; // Indiquer la source
+// var imageX = document.querySelector('#nom_id_imageX'); // Ou prendre une image dans la page
+image01.addEventListener('load', function() { // Affficher l'image une fois chargée
+    context05.drawImage(image01, 0, 0); // Position
+}, false);
+
+
+// Image retaillée
+var canvas06 = document.getElementById('canvas06');
+var context06 = canvas06.getContext('2d');
+var image02 = new Image();
+image02.src = '../images/2.jpg';
+image02.addEventListener('load', function() { // Affficher l'image une fois chargée
+    context06.drawImage(image02, 0, 0, 150, 150); // Position - Taille (Facultatif)
+}, false);
+
+
+// Image recadrée
+var canvas07 = document.getElementById('canvas07');
+var context07 = canvas07.getContext('2d');
+var image03 = new Image();
+image03.src = '../images/2.jpg';
+image03.addEventListener('load', function() { // Affficher l'image une fois chargée
+    context07.drawImage(image03, 30, 30, 150, 150, 0, 0, 150, 150);
+}, false);
+
+
+// Image pattern
+var canvas08 = document.getElementById('canvas08');
+var context08 = canvas08.getContext('2d');
+var image04 = new Image();
+image04.src = '../images/4_min.jpg';
+image04.addEventListener('load', function() { // Affficher l'image une fois chargée
+    var pattern = context08.createPattern(image04, 'repeat');
+    context08.fillStyle = pattern;
+    context08.fillRect(0, 0, 150, 150);
+}, false);
