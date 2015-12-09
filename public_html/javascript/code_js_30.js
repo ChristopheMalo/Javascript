@@ -79,12 +79,12 @@ context04.lineTo(119, 18);
 context04.bezierCurveTo(126, 18, 131, 23, 131, 30);
 context04.lineTo(131, 119);
 context04.closePath();
-context04.fillStyle = "rgb(23, 145, 167)";
+context04.fillStyle = 'rgb(23, 145, 167)';
 context04.fill();
 
-context04.font = "68px Calibri,Geneva,Arial"; // Texte
-context04.fillStyle = "white";
-context04.fillText("js", 84, 115);
+context04.font = '68px Calibri,Geneva,Arial'; // Texte
+context04.fillStyle = 'white';
+context04.fillText('js', 84, 115);
 
 
 // Images et textes
@@ -129,3 +129,112 @@ image04.addEventListener('load', function() { // Affficher l'image une fois char
     context08.fillStyle = pattern;
     context08.fillRect(0, 0, 150, 150);
 }, false);
+
+
+// Les lignes et dégradés
+// Lignes
+var canvas09 = document.getElementById('canvas09');
+var context09 = canvas09.getContext('2d');
+
+context09.lineWidth = '10';
+
+context09.beginPath();
+context09.lineCap = 'butt';
+context09.moveTo(35, 20);
+context09.lineTo(35, 130);
+context09.strokeStyle = 'rgb(23, 145, 167)';
+context09.stroke();
+
+context09.beginPath();
+context09.lineCap = 'round';
+context09.moveTo(75, 20);
+context09.lineTo(75, 130);
+context09.strokeStyle = 'rgb(0, 0, 0)';
+context09.stroke();
+
+context09.beginPath();
+context09.lineCap = 'square';
+context09.moveTo(115, 20);
+context09.lineTo(115, 130);
+context09.strokeStyle = 'rgb(23, 145, 167)';
+context09.stroke();
+
+
+// Lignes brisées
+window.onload = function() {
+    var canvas10  = document.getElementById('canvas10');
+    var context10 = canvas10.getContext('2d');
+    var y, top = 20, left = 15;      
+
+    context10.lineWidth = 10;
+    context09.strokeStyle = 'rgb(0, 0, 0)';
+
+    y = top;
+    context10.beginPath();
+    context10.lineJoin = 'round';
+    context10.moveTo(left + 0, y + 0);
+    context10.lineTo(left + 30, y + 30);
+    context10.lineTo(left + 60, y + 0);
+    context10.lineTo(left + 90, y + 30);
+    context10.lineTo(left + 120, y + 0);
+    context10.stroke();
+
+    y = top + 40;
+    context10.beginPath();
+    context10.lineJoin = 'bevel';
+    context10.moveTo(left + 0, y + 0);
+    context10.lineTo(left + 30, y + 30);
+    context10.lineTo(left + 60, y + 0);
+    context10.lineTo(left + 90, y + 30);
+    context10.lineTo(left + 120, y + 0);
+    context10.stroke();        
+
+    y = top + 80;
+    context10.beginPath();
+    context10.lineJoin = 'miter';
+    context10.moveTo(left + 0, y + 0);
+    context10.lineTo(left + 30, y + 30);
+    context10.lineTo(left + 60, y + 0);
+    context10.lineTo(left + 90, y + 30);
+    context10.lineTo(left + 120, y + 0);
+    context10.stroke();
+};
+
+
+// dégradés linéaires
+var canvas11  = document.getElementById('canvas11');
+var context11 = canvas11.getContext('2d');
+
+var linear = context11.createLinearGradient(0, 0, 0, 150);
+linear.addColorStop(0, 'orange');
+linear.addColorStop(0.5, '#ccc');
+linear.addColorStop(0.5, 'red');
+linear.addColorStop(1, '#000');
+
+context11.fillStyle = linear;
+context11.fillRect(10, 10, 130, 130);
+
+
+// Dégradés radiaux
+var canvas12  = document.getElementById('canvas12');
+var context12 = canvas12.getContext('2d');
+
+var radial1 = context12.createRadialGradient(0, 0, 10, 100, 20, 150); // fond
+radial1.addColorStop(0, '#ddf5f9');
+radial1.addColorStop(1, '#000');
+context12.fillStyle = radial1;
+context12.fillRect(10, 10, 130, 130);
+
+var radial2 = context12.createRadialGradient(75, 75, 10, 82, 70, 30); // bulle 1
+radial2.addColorStop(0, '#ffc55c');
+radial2.addColorStop(0.9, '#ffa500');
+radial2.addColorStop(1, 'rgba(245,160,6,0)');
+context12.fillStyle = radial2;
+context12.fillRect(10, 10, 130, 130);
+
+var radial3 = context12.createRadialGradient(30, 30, 80, 50, 60, 40); // bulle turquoise
+radial3.addColorStop(0, '#86cad2');
+radial3.addColorStop(0.9, '#61aeb6');
+radial3.addColorStop(1, 'rgba(159,209,216,0)');
+context12.fillStyle = radial3;
+context12.fillRect(10, 10, 130, 130);
