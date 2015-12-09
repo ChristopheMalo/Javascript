@@ -162,7 +162,7 @@ context09.stroke();
 
 // Lignes brisées
 window.onload = function() {
-    var canvas10  = document.getElementById('canvas10');
+    var canvas10  = document.querySelector('#canvas10');
     var context10 = canvas10.getContext('2d');
     var y, top = 20, left = 15;      
 
@@ -238,3 +238,95 @@ radial3.addColorStop(0.9, '#61aeb6');
 radial3.addColorStop(1, 'rgba(159,209,216,0)');
 context12.fillStyle = radial3;
 context12.fillRect(10, 10, 130, 130);
+
+
+// Opérations
+// Translations
+var canvas13  = document.getElementById('canvas13');
+var context13 = canvas13.getContext('2d');
+
+context13.save();
+context13.translate(80, 80); // Déplacer le repère d'axe
+
+context13.fillStyle = '#aaa';
+context13.fillRect(0, 0, 60, 60);
+
+context13.restore(); // Replacer le repère d'axe
+
+context13.fillStyle = 'red';
+context13.fillRect(0, 0, 60, 60);
+
+
+// Rotations
+var canvas14  = document.getElementById('canvas14');
+var context14 = canvas14.getContext('2d');
+context14.translate(75,75); // Possibilité de combiner translation et rotation
+
+context14.fillStyle = "teal";
+context14.rotate((Math.PI / 180) * 45); // Méthode rotate() en radians     
+context14.fillRect(0, 0, 50, 50);
+
+context14.fillStyle = "orange";
+context14.rotate(Math.PI / 2);        
+context14.fillRect(0, 0, 50, 50);          
+
+context14.fillStyle = "teal";
+context14.rotate(Math.PI / 2);        
+context14.fillRect(0, 0, 50, 50);      
+
+context14.fillStyle = "orange";
+context14.rotate(Math.PI / 2);        
+context14.fillRect(0, 0, 50, 50);
+
+
+// Animations
+window.requestAnimFrame = (function () {
+    return window.requestAnimationFrame ||          // La forme standardisée
+           window.webkitRequestAnimationFrame ||    // Pour Chrome et Safari
+           window.mozRequestAnimationFrame ||       // Pour Firefox
+           window.oRequestAnimationFrame ||         // Pour Opera
+           window.msRequestAnimationFrame ||        // Pour Internet Explorer
+           function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+           };
+    })();
+
+window.addEventListener('load', function () {
+    var canvas15  = document.querySelector('#canvas15');
+    var context15 = canvas15.getContext('2d');
+
+    function draw(angle) {
+        context15.save();
+        context15.clearRect(0, 0, 150, 150);
+        context15.translate(75, 75);
+
+        context15.fillStyle = "teal";
+        context15.rotate((Math.PI / 180) * (45 + angle));
+        context15.fillRect(0, 0, 50, 50);
+
+        context15.fillStyle = "orange";
+        context15.rotate(Math.PI / 2);
+        context15.fillRect(0, 0, 50, 50);
+
+        context15.fillStyle = "teal";
+        context15.rotate(Math.PI / 2);
+        context15.fillRect(0, 0, 50, 50);
+
+        context15.fillStyle = "orange";
+        context15.rotate(Math.PI / 2);
+        context15.fillRect(0, 0, 50, 50);
+
+        context15.restore();
+
+        angle = angle + 2;
+
+        if (angle >= 360)
+            angle = 0;
+
+        window.requestAnimFrame(function () {
+            draw(angle);
+        });
+    }
+
+    draw(0);
+}, false);
