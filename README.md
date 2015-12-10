@@ -43,3 +43,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 - L'audio et la video
 - L'élément Canvas
 - L'API File
+- L'API Drag & Drop
