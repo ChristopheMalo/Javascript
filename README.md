@@ -42,3 +42,4 @@ L'ensemble des cours, exercices et TP utilisent la console (console.log) pour af
 ## Javascript et HTML5
 - L'audio et la video
 - L'élément Canvas
+- L'API File
