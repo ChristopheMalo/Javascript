@@ -3,14 +3,17 @@
  * Contrôle de saisie de l'utilisateur
  * 
  * 
- * EN COURS DE DEVELOPPEMENT
  * 
  */
 /* Déclaration des variables */
-var chaineSaisie, nombre;
-
+var chaineSaisie, nombre,
+    limiteZero  = 0;
+    limiteDown  = 1,
+    limiteUp    = 9,
+    motDiese    = '#';
+    
 while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => affichage de la boite de dialogue de saisie
-    chaineSaisie = prompt('Saisis un nombre entre 1 et 5 : ');   // Récupérer le texte saisi       
+    chaineSaisie = prompt('Saisis un nombre entre ' + limiteDown + ' et ' + limiteUp + ' : ');   // Récupérer le texte saisi       
 
     if (chaineSaisie === null) {
 
@@ -21,76 +24,50 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
         nombre = parseInt(chaineSaisie); // transformer le texte en nombre
 
         /* Contrôler la saisie de l'utilisateur grâce aux conditions */
-        if (nombre <= 0) {
+        if (nombre <= limiteZero) {
 
-            alert('Le nombre saisi doit être égal ou supérieur à 1 et positif !');
+            alert('Le nombre saisi doit être égal ou supérieur à ' + limiteDown + 'et positif !');
 
-        } else if (1 <= nombre && nombre <= 5) { // Vérification si la saisie est un nombre compris entre 1 et 5
+        } else if (limiteDown <= nombre && nombre <= limiteUp) { // Vérification si la saisie est un nombre compris entre limiteDown et Up
 
-            /* Rappel du nombre saisi et calcul de la factoriell par appel de la fonction calculFactoriel */
+            /* Rappel du nombre saisi */
             console.log('Le nombre saisi est ' + nombre);
             
-            //console.log(carre(nombre, nombre));
-
-            console.log(carre2(nombre, nombre));
+            // Afficher le résultat            
+            /*** Construction de la ligne dans une variable pour utilisation multiple ***/
+            // var ligne = (Array(nombre + 1).join(motDiese) + '\n'); // Construction de la ligne
+            var ligne = (motDiese.repeat(nombre) + '\n'); // Autre façon de construire de la ligne
             
-            //console.log(carre3(nombre));
+            /*** Construction des lignes ***/
+             // Avec un for => les occurences sont concentrées en 1 ligne sur les nouveaux navigateurs
+             // Le for serait pourtant la solution
+            console.log('Avec un for, les occurences sont concentrées sur une ligne sur les nouveaux navigateurs - date exercice : 2015.\nExemple :');
+            for (var i = 1; i < nombre + 1; i++) {
+                console.log(ligne); // Obligation de lister les lignes pour afficher le resultat en console
+            }
             
-            //console.log(carre4(nombre));
-
+            // For avec numero de ligne
+            console.log('Pour afficher les lignes j\'indique un numéro de ligne, mais cela ne répond pas correctement à l\'exercice');
+            for (var i = 1; i < nombre + 1; i++) {
+                console.log(i + ' ' + ligne); // Obligation de lister les lignes pour afficher le resultat en console
+            }
             
-//            // Afficher le résultat
-//            var motDiese = '';
-//            
-//            for (var i = 0; i < nombre; i++) {
-//                motDiese += '#';
-//                //console.log(motDiese); // Affichage en escalier
-//            }
-//            
-//            // Avec un switch - Firefox affiche correctement chaque ligne
-//            console.log('Avec un switch');
-//            switch (nombre) {
-//                case 1:
-//                    console.log(motDiese);
-//                    break;
-//                case 2:
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    break;
-//                case 3:
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    break;
-//                case 4 :
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    break;
-//                case 5 :
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    console.log(motDiese);
-//                    break;
-//            }
-//            
-//            console.log('\n');
-//            
-//            // Avec un for => les occurences sont concentrées en 1 ligne
-//            console.log('Avec un for');
-//            for (var i = 0; i < nombre; i++) {
-//                console.log(motDiese);
-//            }
-            
-            
+            /******************************* 
+             * 
+             * LA SOLUTION : avec un switch
+             * 
+             * *****************************/
+            console.log('Solution : utiliser un switch \'dynamique\' - Le Switch retourne chaque ligne');
+            switch (nombre) {
+                case nombre:
+                    console.log(ligne.repeat(nombre)); // On retourne la ligne x fois selon le nombre saisi
+                    break;                 
+            }
             
 
-        } else if (nombre > 5) {
+        } else if (nombre > limiteUp) {
 
-            alert ('Le nombre saisi doit être inférieur ou égal à 5 !');
+            alert ('Le nombre saisi doit être inférieur ou égal à ' + limiteUp + ' !');
 
         } else {
 
@@ -100,59 +77,3 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
 }
 
 console.log('Au revoir et merci :)');
-
-
-function carre(x, y) {
-    var i, j;
-    for (j = 1; j <= y; j++) {
-        for (i = 1; i <= x; i++) {
-                console.log('#');
-        }
-        console.log('#');
-    }
-}
-
-function carre2(x, y)
-{
-    var i, j;
- 
-    for(j=1; j <= y; j++)
-    {
-        for(i=1; i <= x; i++)
-        {
-            if ((j == 1 && i == 1) || (j == y && i == x))
-                console.log("#");
-            else if ((j == 1 && i == x) || (j == y && i == 1))
-                console.log("#");
-            else if (j==1 || j==y || i==1 || i==x)
-                console.log("#");
-            else
-                console.log("#");
-        }
-        console.log("\n");
-    }
-}
-
-function carre3 (x)
-{
-    var i, j;
-
-    for(i = 0; i < x; i++)
-    {   console.log('X');
-        
-        for(j = 0; j < i + 1; j++)
-            console.log("X");
-            console.log('\n');
-    }
-}
-
-function carre4 (x) {
-    var diese;
-    for (var i = 0; i < x; i++) {
-        diese += '#';
-//        for (var j = 0; j < y; j++) {
-//            console.log(' ');
-//       }
-    }
-    console.log(diese);
-}
