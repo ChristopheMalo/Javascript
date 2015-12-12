@@ -1,5 +1,5 @@
 /* 
- * Code Javascript exercice 10 - Les obstacles
+ * Code Javascript exercice 14 - Les obstacles
  * Contrôle de saisie de l'utilisateur
  * 
  */

@@ -1,5 +1,5 @@
 /* 
- * Code Javascript exercice 09 - Nombre X et #
+ * Code Javascript exercice 13 - Nombre X et #
  * Contrôle de saisie de l'utilisateur
  * 
  * 
