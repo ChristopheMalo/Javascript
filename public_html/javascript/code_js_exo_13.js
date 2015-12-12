@@ -7,10 +7,10 @@
  */
 /* Déclaration des variables */
 var chaineSaisie, nombre,
-    limiteZero  = 0;
-    limiteDown  = 1,
-    limiteUp    = 9,
-    motDiese    = '#';
+    limiteZero      = 0;
+    limiteDown      = 1,
+    limiteUp        = 9,
+    stringToShow    = '#';
     
 while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => affichage de la boite de dialogue de saisie
     chaineSaisie = prompt('Saisis un nombre entre ' + limiteDown + ' et ' + limiteUp + ' : ');   // Récupérer le texte saisi       
@@ -35,8 +35,8 @@ while (true) { // Tant que la boucle est true - CAD mauvaise saisie alors => aff
             
             // Afficher le résultat            
             /*** Construction de la ligne dans une variable pour utilisation multiple ***/
-            // var ligne = (Array(nombre + 1).join(motDiese) + '\n'); // Construction de la ligne
-            var ligne = (motDiese.repeat(nombre) + '\n'); // Autre façon de construire de la ligne
+            // var ligne = (Array(nombre + 1).join(stringToShow) + '\n'); // Construction de la ligne
+            var ligne = (stringToShow.repeat(nombre) + '\n'); // Autre façon de construire de la ligne
             
             /*** Construction des lignes ***/
              // Avec un for => les occurences sont concentrées en 1 ligne sur les nouveaux navigateurs
