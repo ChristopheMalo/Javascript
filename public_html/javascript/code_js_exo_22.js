@@ -12,7 +12,7 @@ var limiteUp    = 100;
 var solution = Math.floor(Math.random() * limiteUp) + 1;
 
 // Debug pour tester la réponse
-console.log("(La solution est " + solution + ")");
+// console.log("(La solution est " + solution + ")");
 
 // Initialisation du nombre saisi pour lancer la boucle
 var nombreSaisi = 0;
