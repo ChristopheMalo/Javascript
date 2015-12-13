@@ -17,16 +17,16 @@ var solution = Math.floor(Math.random() * limiteUp) + 1;
 // Initialisation du nombre saisi pour lancer la boucle
 var nombreSaisi = 0;
 
-console.log('Vous devez trouver un nombre compris entre ' + limiteDown + ' et ' + limiteUp + '.');
+console.log('Tu dois trouver un nombre compris entre ' + limiteDown + ' et ' + limiteUp + '.');
 
 while (nombreSaisi !== solution) { // Tant que la solution n'est pas trouvée
     
-    nombreSaisi = Number(prompt('Saisissez un nombre entre ' + limiteDown + ' et ' + limiteUp + '.')); // Demander un nombre à l'utilisateur
+    nombreSaisi = Number(prompt('Saisis un nombre entre ' + limiteDown + ' et ' + limiteUp + '.')); // Demander un nombre à l'utilisateur
     
     // Vérifier si nombreSaisi correcte (Intervalle limiteDown à limiteUp, gestion bouton annuler === 0 et pas de caractères)
     if ((nombreSaisi < limiteDown) || (nombreSaisi > limiteUp) || isNaN(nombreSaisi)) {
         
-        console.log('Vous devez saisir un nombre entre ' + limiteDown + ' et ' + limiteUp + '.');
+        console.log('Tu dois saisir un nombre entre ' + limiteDown + ' et ' + limiteUp + '.');
     
     } else if (nombreSaisi > solution) { // Le nombre saisi est supérieur à la solution
 
