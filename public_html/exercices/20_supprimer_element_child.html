@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Supprimer les éléments child - Exercice 20 - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Supprimer les éléments child - Exercice 20 - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <style>
+            .exo01 h2 {
+                font-size: 190%;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+            
+            #base, #toSupprimer01, #toSupprimer02 {
+                border: solid 1px #bbb;
+                min-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Supprimer les éléments child d'un <code>div</code> - Exercice 19</h2>
+                <p>Supprimer tous les éléments child à l'intérieur d'un <code>div</code></p>
+                <a class="btn btn-primary" href="../index.html#js_part2" role="button" >Retour à l'index</a> 
+            </div>
+            <div class="row exo01">
+                <h2>Le <code>div</code> avec les child - Div de base</h2>
+                <div id="base" class="col-sm-12">
+                    <p>Texte intro pour situer l'exercice</p>
+                    <dl>
+                        <dt>Élément 1</dt><dd>Description élément 1</dd>
+                        <dt>Élément 2</dt><dd>Description élément 2</dd>
+                        <dt>Élément 3</dt><dd>Description élément 3</dd>
+                        <dt>Élément 4</dt><dd>Description élément 4</dd>
+                    </dl>
+                    <p>Texte avec <a href="#">un lien</a> pour compléter l'exemple</p>
+                </div>
+            </div>
+            
+            <div class="row exo01">
+                <h2>Le <code>div</code> sans les child - Résultat avec un while et firstChild</h2>
+                <div id="toSupprimer01" class="col-sm-12">
+                    <p>Texte intro pour situer l'exercice</p>
+                    <dl>
+                        <dt>Élément 1</dt><dd>Description élément 1</dd>
+                        <dt>Élément 2</dt><dd>Description élément 2</dd>
+                        <dt>Élément 3</dt><dd>Description élément 3</dd>
+                        <dt>Élément 4</dt><dd>Description élément 4</dd>
+                    </dl>
+                    <p>Texte avec <a href="#">un lien</a> pour compléter l'exemple</p>
+                </div>
+            </div>
+            
+            <div class="row exo01">
+                <h2>Le <code>div</code> sans les child - Résultat avec hasChildNodes()</h2>
+                <div id="toSupprimer02" class="col-sm-12">
+                    <p>Texte intro pour situer l'exercice</p>
+                    <dl>
+                        <dt>Élément 1</dt><dd>Description élément 1</dd>
+                        <dt>Élément 2</dt><dd>Description élément 2</dd>
+                        <dt>Élément 3</dt><dd>Description élément 3</dd>
+                        <dt>Élément 4</dt><dd>Description élément 4</dd>
+                    </dl>
+                    <p>Texte avec <a href="#">un lien</a> pour compléter l'exemple</p>
+                </div>
+            </div>
+        </div>
+        <script src="../javascript/code_js_exo_20.js"></script>
+    </body>
+</html>
