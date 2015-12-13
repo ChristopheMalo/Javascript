@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Supprimer les éléments br - Exercice 19 - Javascript - basé sur le MOOC Dynamisez vos sites avec Javascript - OpenClassrooms">
+        <meta name="keywords" content="Javascript, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>Supprimer les éléments br - Exercice 19 - Javascript</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <style>
+            .exo01 h2 {
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section Contenu
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+                <h1>Javascript</h1>
+                <h2>Supprimer les éléments <code>br</code> - Exercice 19</h2>
+                <p>Supprimer tous les <code>br</code> à l'intérieur d'un <code>p</code></p>
+                <a class="btn btn-primary" href="../index.html#js_part2" role="button" >Retour à l'index</a> 
+            </div>
+            <div class="row exo01">
+                <h2>Le <code>p</code> avec des <code>br</code> - Texte de base</h2>
+                <p class="col-sm-12">
+                    Curabitur viverra, ex ac sagittis auctor, ante massa eleifend mi, sit amet vehicula augue felis vitae turpis.<br>
+                    Sed ullamcorper faucibus est eu maximus. Phasellus consectetur eget elit et pellentesque.<br>
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Cras non turpis malesuada, viverra ex in, hendrerit eros.<br>
+                    Aliquam justo erat, lobortis nec dignissim nec, tincidunt nec sapien.<br>
+                    Sed mattis convallis lacus quis consectetur.<br>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br>
+                    Nunc tincidunt varius augue, luctus luctus ex rutrum nec.<br>
+                    Cras sed tortor eget neque porttitor pharetra.<br>
+                    Mauris eu quam porta, sodales leo vitae, cursus lacus. Donec erat dui, sagittis ut lacus nec, luctus lacinia eros.<br>
+                    Ut libero nunc, maximus nec sem aliquam, posuere convallis tellus.<br>
+                    Quisque lobortis, lorem in varius egestas, nisi mauris pretium magna, eget finibus purus sem scelerisque augue.
+                </p>
+            </div>
+            
+            <div class="row exo01">
+                <h2>Le <code>p</code> sans les <code>br</code> - Résultat avec un for inversé</h2>
+                <p id="toSupprimer01" class="col-sm-12">
+                    Curabitur viverra, ex ac sagittis auctor, ante massa eleifend mi, sit amet vehicula augue felis vitae turpis.<br>
+                    Sed ullamcorper faucibus est eu maximus. Phasellus consectetur eget elit et pellentesque.<br>
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Cras non turpis malesuada, viverra ex in, hendrerit eros.<br>
+                    Aliquam justo erat, lobortis nec dignissim nec, tincidunt nec sapien.<br>
+                    Sed mattis convallis lacus quis consectetur.<br>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br>
+                    Nunc tincidunt varius augue, luctus luctus ex rutrum nec.<br>
+                    Cras sed tortor eget neque porttitor pharetra.<br>
+                    Mauris eu quam porta, sodales leo vitae, cursus lacus. Donec erat dui, sagittis ut lacus nec, luctus lacinia eros.<br>
+                    Ut libero nunc, maximus nec sem aliquam, posuere convallis tellus.<br>
+                    Quisque lobortis, lorem in varius egestas, nisi mauris pretium magna, eget finibus purus sem scelerisque augue.
+                </p>
+            </div>
+            
+            <div class="row exo01">
+                <h2>Le <code>p</code> sans les <code>br</code> - Résultat avec un while</h2>
+                <p id="toSupprimer02" class="col-sm-12">
+                    Curabitur viverra, ex ac sagittis auctor, ante massa eleifend mi, sit amet vehicula augue felis vitae turpis.<br>
+                    Sed ullamcorper faucibus est eu maximus. Phasellus consectetur eget elit et pellentesque.<br>
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Cras non turpis malesuada, viverra ex in, hendrerit eros.<br>
+                    Aliquam justo erat, lobortis nec dignissim nec, tincidunt nec sapien.<br>
+                    Sed mattis convallis lacus quis consectetur.<br>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br>
+                    Nunc tincidunt varius augue, luctus luctus ex rutrum nec.<br>
+                    Cras sed tortor eget neque porttitor pharetra.<br>
+                    Mauris eu quam porta, sodales leo vitae, cursus lacus. Donec erat dui, sagittis ut lacus nec, luctus lacinia eros.<br>
+                    Ut libero nunc, maximus nec sem aliquam, posuere convallis tellus.<br>
+                    Quisque lobortis, lorem in varius egestas, nisi mauris pretium magna, eget finibus purus sem scelerisque augue.
+                </p>
+            </div>
+        </div>
+        <script src="../javascript/code_js_exo_19.js"></script>
+    </body>
+</html>
