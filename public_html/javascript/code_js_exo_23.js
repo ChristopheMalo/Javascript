@@ -9,7 +9,7 @@ var limiteDown  = 1;
 var limiteUp    = 100;
 
 // Générer aléatoirement un nombre entre limitDown et limiteUp inclus - donc +1 soit ici 101
-var solution = Math.floor(Math.random() * 100) + 1;
+var solution = Math.floor(Math.random() * limiteUp) + 1;
 
 // Debug pour tester la réponse
 // console.log("(La solution est " + solution + ")");
