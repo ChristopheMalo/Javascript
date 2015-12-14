@@ -99,8 +99,8 @@ console.log('Extract : ' + extract);
 console.log('testExtraire après extract : ' + testExtraire);
 
 
-// Tester si la variable passée en paramètre contien un tableau
-console.log(Array.isArray(testSort)); // Retorune true
+// Tester si la variable passée en paramètre contient un tableau
+console.log(Array.isArray(testSort)); // Retourne true
 
 /*
  * Les piles et les files pour stocker et accéder
