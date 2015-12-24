@@ -40,7 +40,7 @@ function calculDeplacement (tableau) {
     
     var result = 0; // Initialisation de la variable de résultat du calcul des déplacements
     
-    // Parcourir arra ytotal pour calcul total des déplacements
+    // Parcourir array total pour calcul total des déplacements
     for (var i = 0; i < total.length; i++){
         
         result += total[i]; // Calcul
