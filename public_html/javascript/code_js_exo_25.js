@@ -24,16 +24,6 @@ tableauPoints = [
 //];
 
 
-// Fonction de Calcul de déplacement entre 2 points
-// Arguments coordonnées (x,y) de 2 points (1,2)
-function calculDeplacement2points (x1, y1, x2, y2) {
-    
-    var result = Math.abs(x1 - x2) + Math.abs(y1 - y2);
-    return result;
-    
-}
-
-
 // Fonction de calcul de déplacement
 // Argument : un tableau multipoints
 function calculDeplacement (tableau) {
@@ -64,6 +54,16 @@ function calculDeplacement (tableau) {
     
     return result; // Retourne le résultat
 
+}
+
+
+// Fonction de Calcul de déplacement entre 2 points
+// Arguments coordonnées (x,y) de 2 points (1,2)
+function calculDeplacement2points (x1, y1, x2, y2) {
+    
+    var result = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    return result;
+    
 }
 
 
