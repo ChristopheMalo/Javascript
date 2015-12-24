@@ -9,6 +9,20 @@ tableauPoints = [
     [2,8]
 ];
 
+//tableauPoints = [ /* Sous forme coordonnées du point [x,y) */
+//    [0,8],
+//    [1,8],
+//    [2,8],
+//    [3,8],
+//    [3,5],
+//    [3,8]
+//];
+
+//tableauPoints = [
+//    [10,10],
+//    [12,12]
+//];
+
 
 // Fonction de Calcul de déplacement entre 2 points
 // Arguments coordonnées (x,y) de 2 points (1,2)
