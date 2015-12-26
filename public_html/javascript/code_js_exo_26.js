@@ -12,7 +12,7 @@ while (true) {
     
     if (regexCoord.test(chaineSaisie)) {
         
-        console.log('Tu as saisi : ' + chaineSaisie); // Debug
+        console.log('Tu as saisi : ' + chaineSaisie); // Rappeler la saisie de l'utilisateur 
         
         // récupérer la chaine saisie et transformer en array nombre
         var splitReg = /[-]/;           // Rechercher le trait d'union pour spliter les 2 nombres saisis
