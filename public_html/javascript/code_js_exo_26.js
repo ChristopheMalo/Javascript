@@ -40,7 +40,7 @@ while (true) {
             /* Fin debug */
             
             // Calculer le resultat
-            console.log('La distance de déplacement entre les points saisis est : ' + calculDeplacement(tableauPoints)); // Retourne résultat calcul deplacement
+            console.log('La distance de déplacement entre les points saisis est : ' + calculDeplacement(tableauPoints) + ' case(s).'); // Retourne résultat calcul deplacement
             break; // Termine le programme
             
         } else if (chaineSaisie === null && tableauPoints.length < 2) { // Sinon message adequat selon situation
