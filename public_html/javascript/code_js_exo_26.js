@@ -12,7 +12,7 @@ while (true) {
     
     if (regexCoord.test(chaineSaisie)) {
         
-        // console.log(chaineSaisie); // Debug
+        console.log('Tu as saisi : ' + chaineSaisie); // Debug
         
         // récupérer la chaine saisie et transformer en array nombre
         var splitReg = /[-]/;           // Rechercher le trait d'union pour spliter les 2 nombres saisis
@@ -40,7 +40,7 @@ while (true) {
             /* Fin debug */
             
             // Calculer le resultat
-            console.log('La distance est : ' + calculDeplacement(tableauPoints)); // Retourne résultat calcul deplacement
+            console.log('La distance de déplacement entre les points saisis est : ' + calculDeplacement(tableauPoints)); // Retourne résultat calcul deplacement
             break; // Termine le programme
             
         } else if (chaineSaisie === null && tableauPoints.length < 2) {
