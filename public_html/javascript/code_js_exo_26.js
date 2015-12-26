@@ -20,6 +20,28 @@ while (true) {
         
         if (chaineSaisie === null && tableauPoints.length >= 2) {
             
+            // Split chaineSaisie
+//            var splitReg = /[-]/;
+//            var tableauNumberDef = [];
+//            tableauNumberDef = chaineSaisie.split(splitReg);
+//            for (var i = 0; i < tableauNumberDef.length; i++) {
+//                console.log('tabNumDef[' + i + '] = ' + tableauNumberDef[i]);
+//            }
+
+            // Split array
+//            var split = tableauPoints.splice(0,1);
+//            console.log(split);
+
+            var size = 1;
+            for (var i=0; i < tableauPoints.length; i+=size) {
+                var smallarray = tableauPoints.slice(i,i+size);
+                console.log(smallarray);
+            }
+
+            
+            
+            
+            
             /* Debug */
             // console.log('Calcul lancé');
             // console.log('On calcule');
@@ -43,19 +65,7 @@ while (true) {
         }
     }
 }
-
-
-
-// Fonction de Calcul de déplacement entre 2 points
-// Arguments coordonnées (x,y) de 2 points (1,2)
-function calculDeplacement2points (x1, y1, x2, y2) {
-    
-    var result = Math.abs(x1 - x2) + Math.abs(y1 - y2);
-    // console.log('Resultat : ' + result); // Debug
-    return result;
-    
-}
-    
+  
     
 // Fonction de calcul de déplacement
 // Argument : un tableau multipoints
@@ -89,4 +99,15 @@ function calculDeplacement (tableau) {
     
     return result; // Retourne le résultat
 
+}
+
+
+// Fonction de Calcul de déplacement entre 2 points
+// Arguments coordonnées (x,y) de 2 points (1,2)
+function calculDeplacement2points (x1, y1, x2, y2) {
+    
+    var result = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    // console.log('Resultat : ' + result); // Debug
+    return result;
+    
 }
