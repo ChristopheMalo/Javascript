@@ -8,40 +8,29 @@ var regexCoord = /^[0-9]{1,2}[-][0-9]{1,2}$/;   // Regex pour vérifier les coor
 var result;                                     // Variable pour recevoir la regex et valider la saisie
 
 while (true) {
-    var chaineSaisie = prompt('Saisis les coordonnées d\'un point du type x-y');
+    var chaineSaisie = prompt('Saisis les coordonnées d\'un point du type x-y\nIl faut saisir des coordonnées correctes, exemple : 5-7 (maximum coordonnées à 2 chiffres)');
     
     if (regexCoord.test(chaineSaisie)) {
         
-        console.log(chaineSaisie);
-        tableauPoints.push(chaineSaisie);
-        console.log(tableauPoints);
+        // console.log(chaineSaisie); // Debug
+        
+        // récupérer la chaine saisie et transformer en array nombre
+        var splitReg = /[-]/;           // Rechercher le trait d'union pour spliter les 2 nombres saisis
+        var tableauNumberDef = [];      // Tableau pour récuprer les 2 nombres
+        tableauNumberDef = chaineSaisie.split(splitReg); // Séparer les 2 nombres
+               
+//      // Debug pour vérifier que les 2 nombres sont bien récupérés
+//        for (var i = 0; i < tableauNumberDef.length; i++) {
+//           console.log('tabNumDef[' + i + '] = ' + tableauNumberDef[i]);
+//        }
+        
+        tableauPoints.push(tableauNumberDef); // Ajouter le tableau de 2 nombres au tableau des nombres servant au calcul de la distance
+        // console.log('tableauPointsDef : ' + tableauPoints); // debug
         
     } else {
         
         if (chaineSaisie === null && tableauPoints.length >= 2) {
-            
-            // Split chaineSaisie
-//            var splitReg = /[-]/;
-//            var tableauNumberDef = [];
-//            tableauNumberDef = chaineSaisie.split(splitReg);
-//            for (var i = 0; i < tableauNumberDef.length; i++) {
-//                console.log('tabNumDef[' + i + '] = ' + tableauNumberDef[i]);
-//            }
 
-            // Split array
-//            var split = tableauPoints.splice(0,1);
-//            console.log(split);
-
-            var size = 1;
-            for (var i=0; i < tableauPoints.length; i+=size) {
-                var smallarray = tableauPoints.slice(i,i+size);
-                console.log(smallarray);
-            }
-
-            
-            
-            
-            
             /* Debug */
             // console.log('Calcul lancé');
             // console.log('On calcule');
@@ -50,7 +39,7 @@ while (true) {
             // console.log('Longueur : ' + tableauPoints.length);
             /* Fin debug */
             
-            // Calcul resultat
+            // Calculer le resultat
             console.log('La distance est : ' + calculDeplacement(tableauPoints)); // Retourne résultat calcul deplacement
             break; // Termine le programme
             
@@ -73,15 +62,14 @@ function calculDeplacement (tableau) {
     
     // Initialiser variables
     var deplacement,    // Variable pour calculer le deplacement
-        total = [];     // Array pour comptabiliser les déplacement
+        total = [];     // Array pour comptabiliser les déplacements
     
     // Parcourir le tableau (array) en argument
     for (var i = 0; i < tableau.length - 1; i++) {
         
         // Appel de la fonction de calcul de distance entre 2 points
-        // Utilise les nombre de la chaine en excluant le trait d'union
-        deplacement = calculDeplacement2points(tableau[i][0], tableau[i][2], tableau[i+1][0], tableau[i+1][2]);
-        total.push(deplacement); // Ajouter les déplacements dans array total
+        deplacement = calculDeplacement2points(tableau[i][0], tableau[i][1], tableau[i+1][0], tableau[i+1][1]);
+        total.push(deplacement); // Ajouter les déplacements dans array total pour calculer la distance
         // console.log('Deplacement : ' + deplacement); // Debug
        
     }
