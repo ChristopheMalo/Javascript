@@ -10,13 +10,13 @@ var result;                                     // Variable pour recevoir la reg
 while (true) {
     var chaineSaisie = prompt('Saisis les coordonnées d\'un point du type x-y\nIl faut saisir des coordonnées correctes, exemple : 5-7 (maximum coordonnées à 2 chiffres)');
     
-    if (regexCoord.test(chaineSaisie)) {
+    if (regexCoord.test(chaineSaisie)) { // Si nombre (chaine) saisie - vérifaction et ajout au tableau servant au calcul
         
         console.log('Tu as saisi : ' + chaineSaisie); // Rappeler la saisie de l'utilisateur 
         
         // récupérer la chaine saisie et transformer en array nombre
         var splitReg = /[-]/;           // Rechercher le trait d'union pour spliter les 2 nombres saisis
-        var tableauNumberDef = [];      // Tableau pour récuprer les 2 nombres
+        var tableauNumberDef = [];      // Tableau pour récupérer les 2 nombres
         tableauNumberDef = chaineSaisie.split(splitReg); // Séparer les 2 nombres
                
 //      // Debug pour vérifier que les 2 nombres sont bien récupérés
@@ -27,9 +27,9 @@ while (true) {
         tableauPoints.push(tableauNumberDef); // Ajouter le tableau de 2 nombres au tableau des nombres servant au calcul de la distance
         // console.log('tableauPointsDef : ' + tableauPoints); // debug
         
-    } else {
+    } else { // Si pas de chaine saisie - bouton annuler saisie
         
-        if (chaineSaisie === null && tableauPoints.length >= 2) {
+        if (chaineSaisie === null && tableauPoints.length >= 2) { // Vérification si assez de tableau pour lancer le calcul
 
             /* Debug */
             // console.log('Calcul lancé');
@@ -43,7 +43,7 @@ while (true) {
             console.log('La distance de déplacement entre les points saisis est : ' + calculDeplacement(tableauPoints)); // Retourne résultat calcul deplacement
             break; // Termine le programme
             
-        } else if (chaineSaisie === null && tableauPoints.length < 2) {
+        } else if (chaineSaisie === null && tableauPoints.length < 2) { // Sinon message adequat selon situation
             
             console.log('Tu dois saisir au moins 2 points');
             
